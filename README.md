@@ -337,9 +337,9 @@ An effective naming convention creates resource names by incorporating vital res
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9 |
 | <a name="requirement_azurenoopsutils"></a> [azurenoopsutils](#requirement\_azurenoopsutils) | ~> 1.0.4 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.22 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.116 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.1.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 3.1.0 |
 
@@ -348,7 +348,7 @@ An effective naming convention creates resource names by incorporating vital res
 | Name | Version |
 |------|---------|
 | <a name="provider_azurenoopsutils"></a> [azurenoopsutils](#provider\_azurenoopsutils) | ~> 1.0.4 |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.22 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.116 |
 | <a name="provider_random"></a> [random](#provider\_random) | >= 3.1.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | >= 3.1.0 |
 
