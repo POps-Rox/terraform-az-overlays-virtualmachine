@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 module "mod_virtual_machine" {
-  source  = "azurenoops/overlays-virtual-machine/azurerm"
+  source  = "POps-Rox/overlays-virtual-machine/azurerm"
   version = "x.x.x"
 
   # Resource Group, location, VNet and Subnet details

@@ -4,7 +4,7 @@
 #------------------------------------------------------------
 # Azure NoOps Naming - This should be used on all resource naming
 #------------------------------------------------------------
-data "azurenoopsutils_resource_name" "vm_linux" {
+data "popsrox_resource_name" "vm_linux" {
   name          = var.workload_name
   resource_type = "azurerm_linux_virtual_machine"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -14,7 +14,7 @@ data "azurenoopsutils_resource_name" "vm_linux" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "vm_windows" {
+data "popsrox_resource_name" "vm_windows" {
   name          = var.workload_name
   resource_type = "azurerm_windows_virtual_machine"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -24,7 +24,7 @@ data "azurenoopsutils_resource_name" "vm_windows" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "computer_windows" {
+data "popsrox_resource_name" "computer_windows" {
   name          = random_id.uniqueString.hex
   resource_type = "azurerm_windows_virtual_machine"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -34,7 +34,7 @@ data "azurenoopsutils_resource_name" "computer_windows" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "pub_ip" {
+data "popsrox_resource_name" "pub_ip" {
   name          = var.workload_name
   resource_type = "azurerm_public_ip"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -44,7 +44,7 @@ data "azurenoopsutils_resource_name" "pub_ip" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "nic" {
+data "popsrox_resource_name" "nic" {
   name          = var.workload_name
   resource_type = "azurerm_network_interface"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -54,7 +54,7 @@ data "azurenoopsutils_resource_name" "nic" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "secnic" {
+data "popsrox_resource_name" "secnic" {
   name          = var.workload_name
   resource_type = "azurerm_network_interface"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -64,7 +64,7 @@ data "azurenoopsutils_resource_name" "secnic" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "nsg" {
+data "popsrox_resource_name" "nsg" {
   name          = var.workload_name
   resource_type = "azurerm_network_security_group"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -74,7 +74,7 @@ data "azurenoopsutils_resource_name" "nsg" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "disk" {
+data "popsrox_resource_name" "disk" {
   name          = var.workload_name
   resource_type = "azurerm_managed_disk"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -84,7 +84,7 @@ data "azurenoopsutils_resource_name" "disk" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "avset" {
+data "popsrox_resource_name" "avset" {
   name          = var.workload_name
   resource_type = "azurerm_availability_set"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -94,7 +94,7 @@ data "azurenoopsutils_resource_name" "avset" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "ppg" {
+data "popsrox_resource_name" "ppg" {
   name          = var.workload_name
   resource_type = "azurerm_proximity_placement_group"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
