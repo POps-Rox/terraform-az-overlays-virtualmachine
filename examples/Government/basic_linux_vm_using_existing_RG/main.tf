@@ -6,7 +6,7 @@
 module "mod_virtual_machine" {
   #source  = "github.com/POps-Rox/terraform-az-overlays-virtualmachine"
   #version = "x.x.x"
-  source = "../../"
+  source = "../../.."
 
   depends_on = [
     azurerm_log_analytics_workspace.linux-log,
