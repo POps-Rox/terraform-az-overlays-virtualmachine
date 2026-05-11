@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tf-az-overlays-virtualmachine
+  name: terraform-az-overlays-virtualmachine
   description: Terraform overlay module for Azure Virtual Machines
   annotations:
-    github.com/project-slug: POps-Rox/tf-az-overlays-virtualmachine
+    github.com/project-slug: POps-Rox/terraform-az-overlays-virtualmachine
     backstage.io/techdocs-ref: dir:.
   tags:
     - terraform
@@ -12,7 +12,7 @@ metadata:
     - azure
     - platform-ops
   links:
-    - url: https://github.com/POps-Rox/tf-az-overlays-virtualmachine
+    - url: https://github.com/POps-Rox/terraform-az-overlays-virtualmachine
       title: GitHub Repository
       icon: github
 spec:
