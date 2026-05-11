@@ -4,7 +4,7 @@
 # Terraform module for deploying a basic Linux Virtual Machine in Azure. 
 
 module "mod_virtual_machine" {
-  #source  = "github.com/POps-Rox/tf-az-overlays-virtualmachine"
+  #source  = "github.com/POps-Rox/terraform-az-overlays-virtualmachine"
   #version = "x.x.x"
   source = "../../.."
 
