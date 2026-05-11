@@ -149,7 +149,7 @@ variable "dns_servers" {
   default     = []
 }
 
-variable "enable_accelerated_networking" {
+variable "accelerated_networking_enabled" {
   description = "Should Accelerated Networking be enabled? Defaults to false."
   default     = false
 }
@@ -198,7 +198,7 @@ variable "private_ip_address" {
   default     = null
 }
 
-variable "enable_ip_forwarding" {
+variable "ip_forwarding_enabled" {
   description = "Should IP Forwarding be enabled? Defaults to false"
   default     = false
 }
