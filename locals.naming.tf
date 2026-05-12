@@ -12,7 +12,6 @@ locals {
   vm_pub_ip_name                  = coalesce(var.custom_public_ip_name, data.popsrox_resource_name.pub_ip.result)
   vm_nic_name                     = coalesce(var.custom_nic_name, data.popsrox_resource_name.nic.result)
   vm_secondary_nic_name           = data.popsrox_resource_name.secnic.result
-  vm_nsg_name                     = coalesce(var.custom_nic_name, data.popsrox_resource_name.nsg.result)
   ip_configuration_name           = coalesce(var.custom_ipconfig_name, "vm-nic-ipconfig")
   secondary_ip_configuration_name = "vm-secondary-nic-ipconfig"
   vm_avset_name                   = data.popsrox_resource_name.avset.result

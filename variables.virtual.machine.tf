@@ -234,38 +234,6 @@ variable "ip_forwarding_enabled" {
   default     = false
 }
 
-#####################################
-# VM Load Balancer Configuration   ##
-#####################################
-
-variable "attach_load_balancer" {
-  description = "True to attach this VM to a Load Balancer"
-  type        = bool
-  default     = false
-}
-
-variable "load_balancer_backend_pool_id" {
-  description = "Id of the Load Balancer Backend Pool to attach the VM."
-  type        = string
-  default     = null
-}
-
-###########################################
-# VM Application Gateway Configuration   ##
-###########################################
-
-variable "attach_application_gateway" {
-  description = "True to attach this VM to an Application Gateway"
-  type        = bool
-  default     = false
-}
-
-variable "application_gateway_backend_pool_id" {
-  description = "Id of the Application Gateway Backend Pool to attach the VM."
-  type        = string
-  default     = null
-}
-
 ####################################
 # VM Availability Configuration   ##
 ####################################
@@ -879,18 +847,6 @@ variable "enable_ultra_ssd_data_disk_storage_support" {
 #####################################
 # VM log analytics Configuration   ##
 #####################################
-
-variable "nsg_diag_logs" {
-  type        = any
-  description = "NSG Monitoring Category details for Azure Diagnostic setting"
-  default     = ["NetworkSecurityGroupEvent", "NetworkSecurityGroupRuleCounter"]
-}
-
-variable "log_analytics_workspace_id" {
-  type        = any
-  description = "The name of log analytics workspace resource id"
-  default     = null
-}
 
 variable "log_analytics_customer_id" {
   type        = any

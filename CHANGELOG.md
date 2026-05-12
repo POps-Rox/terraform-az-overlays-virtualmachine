@@ -1,3 +1,11 @@
+## [Unreleased]
+
+### Removed
+- Removed unused declarations flagged by `tflint terraform_unused_declarations`:
+  - **WIP feature stubs** (tracked in #15): `attach_load_balancer`, `load_balancer_backend_pool_id`, `attach_application_gateway`, `application_gateway_backend_pool_id`, `extensions_add_tags`, `os_disk_overwrite_tags`, `os_disk_tagging_enabled`, `custom_dcr_name`, `nsg_diag_logs`, `log_analytics_workspace_id`.
+  - **Dead code**: `data.azurerm_client_config.current`, `data.popsrox_resource_name.nsg`, `local.default_tags`, `local.linux_domain_name_label`, `local.windows_domain_name_label`, `local.vm_nsg_name`, and the cascade-orphaned `default_tags_enabled` input.
+  - Removed commented-out `azurerm_monitor_diagnostic_setting.nsg` block in `resources.virtual.machine.diagnostics.tf`.
+
 ## 2.0.0 - 2025-05-11
 
 ### Changed

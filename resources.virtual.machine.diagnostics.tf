@@ -50,28 +50,3 @@ resource "azurerm_virtual_machine_extension" "omsagentlinux" {
     }
   PROTECTED_SETTINGS
 }
-
-
-#--------------------------------------
-# azurerm monitoring diagnostics 
-#--------------------------------------
-/* resource "azurerm_monitor_diagnostic_setting" "nsg" {
-  count                      = var.log_analytics_workspace_id == null ? 0 : 1
-  name                       = var.os_type == "linux" ? lower("nsg-${local.linux_vm_name}-diag") : lower("nsg-${local.windows_vm_name}-diag")
-  target_resource_id         = var.existing_network_security_group_id == null ? azurerm_network_security_group.nsg[0].id : var.existing_network_security_group_id
-  storage_account_id         = var.storage_account_name != null ? data.azurerm_storage_account.storeacc[0].id : null
-  log_analytics_workspace_id = var.log_analytics_workspace_id
-
-  dynamic "log" {
-    for_each = var.nsg_diag_logs
-    content {
-      category = log.value
-      enabled  = true
-
-      retention_policy {
-        enabled = false
-        days    = 0
-      }
-    }
-  }
-} */
