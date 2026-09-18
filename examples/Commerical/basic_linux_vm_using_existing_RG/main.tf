@@ -96,7 +96,6 @@ module "mod_virtual_machine" {
 
   # (Optional) To activate Azure Monitoring and install log analytics agents 
   # (Optional) To save monitoring logs to storage, specify'storage_account_name'.    
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.linux-log.id
 
   # Deploy log analytics agents on a virtual machine. 
   # Customer id and primary shared key for Log Analytics workspace are required.

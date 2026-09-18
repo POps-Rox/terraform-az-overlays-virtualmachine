@@ -183,7 +183,7 @@ resource "azurerm_windows_virtual_machine" "win_vm" {
   allow_extension_operations   = true
   dedicated_host_id            = var.dedicated_host_id
   custom_data                  = var.custom_data != null ? var.custom_data : null
-  enable_automatic_updates     = var.enable_automatic_updates
+  automatic_updates_enabled    = var.enable_automatic_updates
   license_type                 = var.license_type
   availability_set_id          = var.enable_vm_availability_set == true ? element(concat(azurerm_availability_set.aset[*].id, [""]), 0) : null
   encryption_at_host_enabled   = var.enable_encryption_at_host

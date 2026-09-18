@@ -8,7 +8,7 @@ resource "azurerm_maintenance_assignment_virtual_machine" "maintenance_configura
   for_each                     = toset(var.maintenance_configuration_ids)
   location                     = local.location
   maintenance_configuration_id = each.value
-  virtual_machine_id           = var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id
+  virtual_machine_id           = element(var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id, 0)
 
   lifecycle {
     precondition {
