@@ -29,13 +29,13 @@ resource "azurerm_virtual_machine_extension" "win_aad_login" {
 resource "azurerm_role_assignment" "rbac_user_login" {
   for_each             = toset(var.aad_login_enabled ? var.aad_login_user_objects_ids : [])
   principal_id         = each.value
-  scope                = var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id
+  scope                = element(var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id, 0)
   role_definition_name = "Virtual Machine User Login"
 }
 
 resource "azurerm_role_assignment" "rbac_admin_login" {
   for_each             = toset(var.aad_login_enabled ? var.aad_login_admin_objects_ids : [])
   principal_id         = each.value
-  scope                = var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id
+  scope                = element(var.os_type == "linux" ? azurerm_linux_virtual_machine.linux_vm[*].id : azurerm_windows_virtual_machine.win_vm[*].id, 0)
   role_definition_name = "Virtual Machine Administrator Login"
 }
